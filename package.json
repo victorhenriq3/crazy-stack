@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand"
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "generate": "yarn plop --plopfile ./generators/plopfile.js"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
     "jest": "^29.7.0",
     "jest-mock-extended": "^4.0.0-beta1",
     "mockdate": "^3.0.5",
+    "plop": "^4.0.1",
     "prettier": "^3.3.3",
     "ts-jest": "^29.2.5",
     "typescript": "^5.6.3",

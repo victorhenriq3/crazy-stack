@@ -1,0 +1,32 @@
+import MockDate from "mockdate";
+import { {{pascalCase name}}Entity } from "./{{pascalCase name}}Entity";
+
+export const fake{{pascalCase name}}Entity = {
+  _id: "1",
+  createdById: "1",
+  active: true,
+  name: "{{pascalCase name}} 1",
+  createdAt: new Date(),
+  updatedAt: new Date(),
+}
+
+export const fake{{pascalCase name}}Pagianted = {
+  total: 11,
+  {{camelCase name}}s: Array(10).fill(fake{{pascalCase name}}Entity)
+}
+
+describe('{{pascalCase name}}', () => {
+  beforeAll(async () => {
+    MockDate.set(new Date());
+  });
+
+  afterAll(async () => {
+    MockDate.reset();
+  })
+
+  it('can be creted', () => {
+    const obj = new {{pascalCase name}}Entity(fake{{pascalCase name}}Entity);
+    expect(obj).toBeTruthy();
+    expect(obj).toEqual({...fake{{pascalCase name}}Entity, _id: undefined, active: false, createdAt: new Date(), updatedAt: new Date()});
+  })
+})
