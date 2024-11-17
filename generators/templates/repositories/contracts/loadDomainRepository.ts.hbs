@@ -1,0 +1,7 @@
+import { Query } from "@/application/types";
+import { {{pasCalcase name}} } from "@/sclices/{{camelCase name}}/entities";
+
+
+export interface Load{{pascalCase name}}Repository {
+  load{{pascalCase name}}(query: Query): Promise<{{pascalCase name}}Data | null>;
+}

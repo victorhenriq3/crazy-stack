@@ -48,6 +48,11 @@ const useCasesCreations = [
   },
   {
     type: "add",
+    path: "../src/slices/{{camelCase name}}/repositories/contracts/load{{pascalCase name}}Repository.ts",
+    templateFile: "./templates/repositories/contracts/loadDomainRepository.ts.hbs",
+  },
+  {
+    type: "add",
     path: "../src/slices/{{camelCase name}}/useCases/add{{pascalCase name}}/add{{pascalCase name}}.ts",
     templateFile: "./templates/useCases/addDomain/AddDomain.ts.hbs",
   },
